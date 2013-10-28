@@ -49,6 +49,8 @@ if [[ -z $MIME_TYPE ]] ; then
         MIME_TYPE="text/javascript; charset=us-ascii"
     elif [[ "svg" = ${FILE##*.} ]] ; then
         MIME_TYPE="image/svg+xml; charset=utf-8"
+    elif [[ "woff" = ${FILE##*.} ]] ; then
+        MIME_TYPE="application/x-font-woff"
     else
         MIME_TYPE=`file --brief --mime "$FILE"`
     fi
